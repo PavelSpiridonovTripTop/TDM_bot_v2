@@ -1,0 +1,21 @@
+version: "3"
+
+services:
+
+  docker-tutorial:
+#    image: php:7.3-apache
+#    container_name: docker-tutorial
+#    environment:
+#      - APACHE_LOG_DIR=/var/www/html/public
+
+    build:
+#
+      context: .
+
+      dockerfile: .docker/Dockerfile
+
+    image: docker-tutorial
+#    volumes:
+#    - ./test:/var/www/html
+    ports:
+      - "8000:80"
